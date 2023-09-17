@@ -36,6 +36,9 @@ use-site-title: false
     /* For clickable items */
     a, .toggle-abstract {
       transition: color 0.3s ease;
+      margin: 0;
+      padding: 0;
+      display: inline;  /* Ensuring it's inline */
     }
 
     a:hover, .toggle-abstract:hover {
@@ -47,7 +50,14 @@ use-site-title: false
       font-family: 'Georgia', serif;
     }
 
-  </style>
+    /* Added style for the hyperlink within parentheses */
+    a.parenthesis-link {
+        margin: 0;
+        padding: 0;
+        display: inline;  /* Ensuring it's inline */
+    }
+
+</style>
   
   <script>
     function toggleAbstract(id) {
