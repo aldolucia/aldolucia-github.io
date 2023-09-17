@@ -19,53 +19,38 @@ title: Aldo Lucia
     padding: 0;
   }
 
-  .image-container {
+  /* Flexbox layout for the main content */
+  .row {
     display: flex;
-    justify-content: center;  /* Horizontally centering content */
-    align-items: center;      /* Vertically centering content */
-    height: 100%;             /* Taking the full height of its container */
-  }
-
-  /* Create two unequal columns that floats next to each other */
-  .column {
-    float: left;
-    padding: 10px;
+    flex-wrap: wrap;
+    align-items: center;
   }
 
   .left {
-    width: 300px;
-    margin-right: 40px;
+    flex: 2; /* Giving more space for the image */
+    text-align: center;
+    padding-right: 20px;
   }
 
   .right {
-    width: 360px;
+    flex: 3; /* Giving more space for the text */
     text-align: left;
   }
 
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  img.center {
+    max-width: 100%;
+    height: auto;
   }
 
-  /* Media query for screens with max width of 768px */
-  @media (max-width: 768px) {
+  /* Media query for screens with max width of 992px - typical breakpoint for medium devices */
+  @media (max-width: 992px) {
     .left, .right {
-      float: none;
       width: 100%;
+      flex: 1;
     }
 
-    .left {
-      text-align: center;
-    }
-
-    img.center {
-      display: block;
-      margin: 0 auto; /* This should horizontally center the image */
-      width: auto; 
-      max-width: 80%; /* You can adjust this if you want it smaller/bigger. */
-      height: auto;
+    .right p {
+      margin-top: 20px; /* spacing between image and text */
     }
   }
 
@@ -75,9 +60,7 @@ title: Aldo Lucia
 <body>
   <div class="row">
     <div class="column left">
-      <div class="image-container">
         <img src="Aldo Lucia.png" alt="Photo of Aldo Lucia" class="center">
-      </div>
     </div>
     <div class="column right">
       <p>Hi, I am a Ph.D. candidate at California Institute of Technology.</p>
