@@ -45,15 +45,30 @@ title: Aldo Lucia
     margin: 0 auto;
   }
 
-  @media (max-width: 768px) {
+  body, p, img {
+    margin: 0;
+    padding: 0;
+}
+
+/* Media query for screens with max width of 768px */
+@media (max-width: 768px) {
   .left, .right {
-    float: none; /* To stack the columns vertically */
-    width: 100%; /* To take the full width of the screen */
-    text-align: center; /* To center text and image */
+    float: none;
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+
+  .right p {
+    margin-top: 20px; /* Gives a little space between the image and the text */
   }
 
   img.center {
-    margin: 20px auto; /* To ensure the image has some spacing and is centered */
+    display: block;
+    width: auto; /* Reset to auto to maintain the original image width */
+    max-width: 100%; /* Ensure it doesn't exceed screen width */
+    height: auto;
+    margin: 20px auto;
   }
 }
 </style>
