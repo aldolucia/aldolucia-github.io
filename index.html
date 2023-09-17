@@ -6,39 +6,51 @@ title: Aldo Lucia
 
 <head>
 <style>
-
   table, th, td {
-  border-style: none;
-}
+    border-style: none;
+  }
   
-* {
-  box-sizing: border-box;
-}
+  * {
+    box-sizing: border-box;
+  }
 
-/* Create two unequal columns that floats next to each other */
-.column {
-  float: left;
-  padding: 10px;
-}
+  /* Create two unequal columns that floats next to each other */
+  .column {
+    float: left;
+    padding: 10px;
+  }
 
-.left {
-  width: 50px;
-}
+  .left {
+    width: 50px; /* If the image width is greater than 50px, you may want to adjust this */
+  }
 
-.right {
-  width: 450px;
-}
+  .right {
+    width: 450px;
+    font-size: 16px; /* Adjust to make the text as visible as you want. */
+  }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}        
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Centering the image */
+  img.center {
+    display: block;
+    margin: 0 auto;
+  }
 </style>
 </head>
 
 <body>
-  <center><img src="Aldo Lucia.png" alt="Photo of Aldo Lucia" class="center" style="width:50%;"> </center>
-  <p>Hi, I am a Ph.D. candidate at California Institute of Technology.</p>
+  <div class="row">
+    <div class="column left">
+      <img src="Aldo Lucia.png" alt="Photo of Aldo Lucia" class="center">
+    </div>
+    <div class="column right">
+      <p>Hi, I am a Ph.D. candidate at California Institute of Technology.</p>
+    </div>
+  </div>
 </body>
