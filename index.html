@@ -5,68 +5,60 @@ title: Aldo Lucia
 ---
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-<style>
-  table, th, td {
-    border-style: none;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
+    body, p, img {
+      margin: 0;
+      padding: 0;
+    }
 
-  body, p, img {
-    margin: 0;
-    padding: 0;
-  }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
 
-  /* Flexbox layout for the main content */
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  .left {
-    flex: 2; /* Giving more space for the image */
-    text-align: center;
-    padding-right: 20px;
-  }
-
-  .right {
-    flex: 3; /* Giving more space for the text */
-    text-align: left;
-  }
-
-  img.center {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* Media query for screens with max width of 576px - typical breakpoint for medium devices */
-  @media (max-width: 576px) {
-    .left, .right {
-      width: 100%;
+    .left {
       flex: 1;
+      text-align: center;
+      padding-right: 20px;
     }
 
-    .right p {
-      margin-top: 20px; /* spacing between image and text */
+    .right {
+      flex: 2;
+      text-align: left;
     }
-  }
 
-</style>
+    img.center {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 576px) {
+      .left, .right {
+        width: 100%;
+      }
+
+      .right p {
+        margin-top: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <div class="row">
-    <div class="column left">
+    <div class="left">
         <img src="Aldo Lucia.png" alt="Photo of Aldo Lucia" class="center">
     </div>
-    <div class="column right">
+    <div class="right">
       <p>Hi, I am a Ph.D. candidate at California Institute of Technology.</p>
     </div>
   </div>
 </body>
+
