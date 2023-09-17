@@ -19,18 +19,15 @@ title: Aldo Lucia
 
     .row {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column; /* Set the default direction to column for mobile-first */
       align-items: center;
     }
 
     .left {
-      flex: 1;
       text-align: center;
-      padding-right: 20px;
     }
 
     .right {
-      flex: 2;
       text-align: left;
     }
 
@@ -39,13 +36,19 @@ title: Aldo Lucia
       height: auto;
     }
 
-    @media (max-width: 576px) {
-      .left, .right {
-        width: 100%;
+    @media (min-width: 577px) {
+      .row {
+        flex-direction: row; /* On larger screens, switch back to a row layout */
+        align-items: flex-start; /* Align items to the start/top */
       }
 
-      .right p {
-        margin-top: 20px;
+      .left {
+        padding-right: 20px;
+        flex: 1;
+      }
+
+      .right {
+        flex: 2;
       }
     }
   </style>
@@ -61,4 +64,5 @@ title: Aldo Lucia
     </div>
   </div>
 </body>
+
 
