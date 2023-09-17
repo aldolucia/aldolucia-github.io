@@ -5,55 +5,72 @@ title: Aldo Lucia
 ---
 
 <head>
-<style>
-  table, th, td {
-    border-style: none;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  /* Create two unequal columns that floats next to each other */
-  .column {
-    float: left;
-    padding: 10px;
-  }
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-  .left {
-    width: 300px; /* Increased width for the image */
-    margin-right: 40px; /* Increased margin for more space between the image and text */
-  }
+    body, p, img {
+      margin: 0;
+      padding: 0;
+    }
 
-  .right {
-    width: 360px; /* Adjusted width to account for increased .left width and margin */
-    font-size: 16px;
-  }
+    .row {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start; 
+    }
 
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+    .left {
+      text-align: center;
+      padding-right: 20px;
+      flex: 1;
+    }
 
-  /* Centering the image */
-  img.center {
-    display: block;
-    width: 100%; /* Makes the image take the full width of its container */
-    height: auto; /* Maintains the image's aspect ratio */
-    margin: 0 auto;
-  }
-</style>
+    .right {
+      flex: 2;
+      text-align: left;
+    }
+
+    img.center {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Mobile view styles */
+    .mobile-view {
+      display: none; /* Hidden by default */
+      text-align: center; 
+    }
+
+  </style>
 </head>
 
 <body>
-  <div class="row">
-    <div class="column left">
+  <!-- Desktop View -->
+  <div class="row desktop-view">
+    <div class="left">
       <img src="Aldo Lucia.png" alt="Photo of Aldo Lucia" class="center">
     </div>
-    <div class="column right">
+    <div class="right">
       <p>Hi, I am a Ph.D. candidate at California Institute of Technology.</p>
     </div>
   </div>
+
+  <!-- Mobile View (hidden by default) -->
+  <div class="mobile-view">
+    <img src="Aldo Lucia.png" alt="Photo of Aldo Lucia" class="center">
+    <p>Hi, I am a Ph.D. candidate at California Institute of Technology.</p>
+  </div>
+
+  <script>
+    // Check screen width
+    if (window.innerWidth <= 576) {
+      // This is likely a mobile device, adjust the layout
+      document.querySelector('.desktop-view').style.display = "none";
+      document.querySelector('.mobile-view').style.display = "block";
+    }
+  </script>
 </body>
