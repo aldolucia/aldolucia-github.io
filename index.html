@@ -14,6 +14,18 @@ title: Aldo Lucia
     box-sizing: border-box;
   }
 
+  body, p, img {
+    margin: 0;
+    padding: 0;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;  /* Horizontally centering content */
+    align-items: center;      /* Vertically centering content */
+    height: 100%;             /* Taking the full height of its container */
+  }
+
   /* Create two unequal columns that floats next to each other */
   .column {
     float: left;
@@ -21,13 +33,13 @@ title: Aldo Lucia
   }
 
   .left {
-    width: 300px; /* Increased width for the image */
-    margin-right: 40px; /* Increased margin for more space between the image and text */
+    width: 300px;
+    margin-right: 40px;
   }
 
   .right {
-    width: 450px; /* Adjusted width to account for increased .left width and margin */
-    font-size: 16px;
+    width: 360px;
+    text-align: left;
   }
 
   /* Clear floats after the columns */
@@ -37,53 +49,38 @@ title: Aldo Lucia
     clear: both;
   }
 
-  /* Centering the image */
-  img.center {
-    display: block;
-    width: 100%; /* Makes the image take the full width of its container */
-    height: auto; /* Maintains the image's aspect ratio */
-    margin: 0 auto;
+  /* Media query for screens with max width of 768px */
+  @media (max-width: 768px) {
+    .left, .right {
+      float: none;
+      width: 100%;
+    }
+
+    .left {
+      text-align: center;
+    }
+
+    img.center {
+      display: block;
+      margin: 0 auto; /* This should horizontally center the image */
+      width: auto; 
+      max-width: 80%; /* You can adjust this if you want it smaller/bigger. */
+      height: auto;
+    }
   }
 
-  body, p, img {
-    margin: 0;
-    padding: 0;
-}
-
-/* Media query for screens with max width of 768px */
-@media (max-width: 768px) {
-  .left, .right {
-    float: none;
-    width: 100%;
-  }
-
-  .left {
-    text-align: center; /* Centering content of .left only */
-  }
-
-  .right {
-    text-align: left; /* Making sure text alignment in .right is to the left */
-  }
-
-  img.center {
-    display: block;
-    width: auto; /* Reset to auto to maintain the original image width */
-    max-width: 100%; /* Ensure it doesn't exceed screen width */
-    height: auto;
-    margin: 20px auto; /* Top and bottom margin of 20px, auto on the sides to center the image */
-  }
-}
 </style>
 </head>
 
 <body>
   <div class="row">
     <div class="column left">
-      <img src="Aldo Lucia.png" alt="Photo of Aldo Lucia" class="center">
+      <div class="image-container">
+        <img src="Aldo Lucia.png" alt="Photo of Aldo Lucia" class="center">
+      </div>
     </div>
     <div class="column right">
       <p>Hi, I am a Ph.D. candidate at California Institute of Technology.</p>
     </div>
   </div>
 </body>
-
