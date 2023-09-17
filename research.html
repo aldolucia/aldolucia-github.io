@@ -1,1 +1,83 @@
-#Work in Progress
+---
+layout: page
+title: All Research
+description: All my research
+use-site-title: false
+---
+
+<head>
+  <style>
+    .abstract {
+      display: none;
+      margin-left: 20px;
+      font-style: italic;
+    }
+
+    .toggle-abstract {
+      cursor: pointer;
+      color: blue;
+      text-decoration: underline;
+    }
+
+    li {
+      margin-bottom: 1em; /* You can adjust this value */
+    }
+  </style>
+
+  <script>
+    function toggleAbstract(id) {
+      var element = document.getElementById(id);
+      if (element.style.display === "none" || element.style.display === "") {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+      }
+    }
+  </script>
+</head>
+
+<body>
+<p><span style="font-size:24px;font-weight:bold;">Job Market Paper </span></p>
+<ol>
+  <li>
+          Robust Estimation of Risk Preferences.
+        (with Shunto J. Kobayashi).
+        <span class="toggle-abstract" onclick="toggleAbstract('abstract1')">[Abstract]</span>
+        <div id="abstract1" class="abstract">
+         Economic models estimated from experimental data can guide decisions and influence policy if they can predict real-world behaviors.  For instance, financial advisors might use surveys involving binary choices between lotteries to determine a portfolio composition that best aligns with their clients' attitudes toward risk. In this paper, we contribute to the analysis of how well economic models predict behaviors under risk, both within and outside experimental settings, in two distinct ways. First, we introduce a novel structural approach that generates predictions about behavior under risk without relying on specific decision models. Second, using both experimental and field data, we show that our novel approach outperforms popular economic models and black box algorithms in terms of out-of-sample predictions.
+        </div>
+        <div class="paper-info">
+          -- Draft coming soon.
+        </div>
+  </li>
+  </ol>
+<p><span style="font-size:24px;font-weight:bold;">Working Papers</span></p>
+
+    <ol>
+      <li>
+        <a href="https://www.dropbox.com/scl/fi/xqbv0dp01u7wzcvj1li7b/What_drives-violations-of-the-independence-axiom.pdf?rlkey=xd3reirmnq0suljnvfv7mlknl&dl=0">
+          What Drives Violations of the Independence Axiom? The Role of Decision Confidence
+        </a> 
+        <span class="toggle-abstract" onclick="toggleAbstract('abstract1')">[Abstract]</span>
+        <div id="abstract1" class="abstract">
+        A central research question in economics is how individuals make decisions in the presence of uncertainty.  Research has demonstrated critical shortcomings in the neoclassical formulation of Expected Utility (EU) and its central assumption, the independence axiom.  In the most famous counterexample of EU proposed by Maurice Allais in 1952, individuals typically violate the independence axiom by showing higher risk aversion when one certain option is available than when all the available options are uncertain.  
+        </div>
+        <div class="paper-info">
+          -- Presented at SITE 2023 (virtual) and Econometric Society European Meetings 2023.
+        </div>
+      </li>
+
+      <li>
+        <a href="https://www.dropbox.com/scl/fi/dagvdwtqertdgjs0ubnlu/Deliberate_Randomization_Under_Risk.pdf?rlkey=vsuvtooktcqfln9z2mznr89i4&dl=0">
+          Deliberate Randomization under Risk
+        </a>
+        <span class="toggle-abstract" onclick="toggleAbstract('abstract2')">[Abstract]</span>
+        <div id="abstract2" class="abstract">
+          We consider a decision-maker (DM) with convex preferences who faces a set of risky actions and can delegate his choice to a randomization device. Under convexity, the  DM's preferences admit a conservative multi-utility representation: each utility generates an evaluation for each action, and actions are ranked according to the lowest evaluation. Building on this multi-utility representation, we characterize the set of optimal actions and propose an efficiency criterion to rank them. Next, we narrow our attention to deliberate randomization for a DM with two utilities. In this case, we show that the DM never needs to select more than two actions with positive probability and study when the desire to randomize reveals information about risk attitude. Finally, we apply our results to games where each player has two actions and two utility functions. We show that incentives to randomize extend to strategic settings and derive a new class of mixed Nash equilibria that we call ``strict" because players strictly prefer randomization. In general, convexity may lead to a multiplicity of mixed Nash equilibria. However, we show that when they exist, only strict equilibria are such that all the mixed actions are efficient.
+        </div>
+        <div class="paper-info">
+          -- Under review.
+        </div>
+      </li>
+    </ol>
+</body>
