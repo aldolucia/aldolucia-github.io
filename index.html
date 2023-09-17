@@ -55,12 +55,14 @@ title: Aldo Lucia
   .left, .right {
     float: none;
     width: 100%;
-    text-align: center;
-    display: block;
   }
 
-  .right p {
-    margin-top: 20px; /* Gives a little space between the image and the text */
+  .left {
+    text-align: center; /* Centering content of .left only */
+  }
+
+  .right {
+    text-align: left; /* Making sure text alignment in .right is to the left */
   }
 
   img.center {
@@ -68,7 +70,7 @@ title: Aldo Lucia
     width: auto; /* Reset to auto to maintain the original image width */
     max-width: 100%; /* Ensure it doesn't exceed screen width */
     height: auto;
-    margin: 20px auto;
+    margin: 20px auto; /* Top and bottom margin of 20px, auto on the sides to center the image */
   }
 }
 </style>
