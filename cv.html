@@ -3,18 +3,20 @@ layout: page
 permalink: /cv/
 ---
 
-Download my CV <a href="/Aldo_Lucia_cv.pdf" download>here</a>.
-
 <script>
-  // Function to detect mobile device
   function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-  };
+  }
 
-  // Check if the user is on mobile and if so, redirect to Dropbox link
-  if(isMobileDevice()) {
-    window.location.href = 'https://www.dropbox.com/scl/fi/f22cvs23d697xfekirtno/CV_RESEARCH.pdf?rlkey=etp472hp7ivxeb3vrhe9y3g1k&dl=0';
+  function handleEmbedClick() {
+    if(isMobileDevice()) {
+      window.location.href = 'https://www.dropbox.com/scl/fi/f22cvs23d697xfekirtno/CV_RESEARCH.pdf?rlkey=etp472hp7ivxeb3vrhe9y3g1k&dl=0';
+    }
   }
 </script>
 
-<embed src="/Aldo_Lucia_cv.pdf" width="100%" height="600px" type="application/pdf" style="margin-top: 50px;">
+Download my CV <a href="/Aldo_Lucia_cv.pdf" download>here</a>.
+
+<div onclick="handleEmbedClick()" style="cursor: pointer;">
+  <embed src="/Aldo_Lucia_cv.pdf" width="100%" height="600px" type="application/pdf" style="margin-top: 50px;">
+</div>
