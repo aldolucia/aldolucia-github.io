@@ -1,16 +1,22 @@
 ---
 layout: page
 title: All Research
-description: All my research
 use-site-title: false
 ---
 
 <head>
   <style>
+    /* Main styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      padding: 20px;
+    }
+
     .abstract {
       display: none;
       margin-left: 20px;
       font-style: italic;
+      text-align: justify;
     }
 
     .toggle-abstract {
@@ -20,10 +26,30 @@ use-site-title: false
     }
 
     li {
-      margin-bottom: 1em; /* You can adjust this value */
+      margin-bottom: 1em;
     }
-  </style>
 
+    .paper-info {
+      font-size: 0.9em;
+      color: grey;
+    }
+
+    /* For clickable items */
+    a, .toggle-abstract {
+      transition: color 0.3s ease;
+    }
+
+    a:hover, .toggle-abstract:hover {
+      color: darkblue;
+    }
+
+    /* To emphasize your titles */
+    p span {
+      font-family: 'Georgia', serif;
+    }
+
+  </style>
+  
   <script>
     function toggleAbstract(id) {
       var element = document.getElementById(id);
@@ -58,8 +84,8 @@ use-site-title: false
         <a href="https://www.dropbox.com/scl/fi/xqbv0dp01u7wzcvj1li7b/What_drives-violations-of-the-independence-axiom.pdf?rlkey=xd3reirmnq0suljnvfv7mlknl&dl=0">
           What Drives Violations of the Independence Axiom? The Role of Decision Confidence
         </a> 
-        <span class="toggle-abstract" onclick="toggleAbstract('abstract1')">[Abstract]</span>
-        <div id="abstract1" class="abstract">
+        <span class="toggle-abstract" onclick="toggleAbstract('abstract2')">[Abstract]</span>
+        <div id="abstract2" class="abstract">
         A central research question in economics is how individuals make decisions in the presence of uncertainty.  Research has demonstrated critical shortcomings in the neoclassical formulation of Expected Utility (EU) and its central assumption, the independence axiom.  In the most famous counterexample of EU proposed by Maurice Allais in 1952, individuals typically violate the independence axiom by showing higher risk aversion when one certain option is available than when all the available options are uncertain.  
         </div>
         <div class="paper-info">
@@ -71,8 +97,8 @@ use-site-title: false
         <a href="https://www.dropbox.com/scl/fi/dagvdwtqertdgjs0ubnlu/Deliberate_Randomization_Under_Risk.pdf?rlkey=vsuvtooktcqfln9z2mznr89i4&dl=0">
           Deliberate Randomization under Risk
         </a>
-        <span class="toggle-abstract" onclick="toggleAbstract('abstract2')">[Abstract]</span>
-        <div id="abstract2" class="abstract">
+        <span class="toggle-abstract" onclick="toggleAbstract('abstract3')">[Abstract]</span>
+        <div id="abstract3" class="abstract">
           We consider a decision-maker (DM) with convex preferences who faces a set of risky actions and can delegate his choice to a randomization device. Under convexity, the  DM's preferences admit a conservative multi-utility representation: each utility generates an evaluation for each action, and actions are ranked according to the lowest evaluation. Building on this multi-utility representation, we characterize the set of optimal actions and propose an efficiency criterion to rank them. Next, we narrow our attention to deliberate randomization for a DM with two utilities. In this case, we show that the DM never needs to select more than two actions with positive probability and study when the desire to randomize reveals information about risk attitude. Finally, we apply our results to games where each player has two actions and two utility functions. We show that incentives to randomize extend to strategic settings and derive a new class of mixed Nash equilibria that we call ``strict" because players strictly prefer randomization. In general, convexity may lead to a multiplicity of mixed Nash equilibria. However, we show that when they exist, only strict equilibria are such that all the mixed actions are efficient.
         </div>
         <div class="paper-info">
