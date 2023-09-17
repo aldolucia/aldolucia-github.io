@@ -50,7 +50,7 @@ layout: home
       text-align: left;
       margin-top: 10px; /* Add space between the image and text */
     }
-</style>
+  </style>
 </head>
 
 <body>
@@ -66,19 +66,19 @@ layout: home
    of economic models, with particular attention to the external validity of 
    their predictions.</p>
    
-<!-- Space between paragraphs -->
-<br> 
+    <!-- Space between paragraphs -->
+    <br> 
 
-<p style="color: blue;"><strong>I am on the Econ job market during the 2023-2024 academic year!</strong></p>
+    <p style="color: blue;"><strong>I am on the Econ job market during the 2023-2024 academic year!</strong></p>
 
-      <!-- Space between paragraphs -->
-<br> 
-      <!-- Adding the items as links -->
-<p>
-    <a href="https://www.aldolucia.com/cv/" target="_blank">Curriculum Vitae</a><br>
-    <a href="https://www.hss.caltech.edu/people/aldo-lucia?back_url=%2Fpeople%3Fcategory%3D%26category%3D52%26search%3DAldo%2BLucia%26submit%3DSearch" target="_blank">Caltech Directory</a><br>
-    Email: <a href="mailto:allucia@caltech.edu">allucia@caltech.edu</a>
-</p>
+    <!-- Space between paragraphs -->
+    <br> 
+    <!-- Adding the items as links -->
+    <p>
+      <a href="https://www.aldolucia.com/cv/" target="_blank">Curriculum Vitae</a><br>
+      <a href="https://www.hss.caltech.edu/people/aldo-lucia?back_url=%2Fpeople%3Fcategory%3D%26category%3D52%26search%3DAldo%2BLucia%26submit%3DSearch" target="_blank">Caltech Directory</a><br>
+      Email: <a href="mailto:allucia@caltech.edu">allucia@caltech.edu</a>
+    </p>
     </div>
   </div>
 
@@ -91,25 +91,27 @@ layout: home
    of economic models, with particular attention to the external validity of 
    their predictions.</p>
    
-<!-- Space between paragraphs -->
-<br> 
+    <!-- Space between paragraphs -->
+    <br> 
 
-<p style="color: blue;"><strong>I am on the Econ job market during the 2023-2024 academic year!</strong></p>
+    <p style="color: blue;"><strong>I am on the Econ job market during the 2023-2024 academic year!</strong></p>
 
     <!-- Space between paragraphs -->
-<br> 
+    <br> 
     <!-- Adding the items as links -->
-<p>
-    <a href="https://www.aldolucia.com/cv/" target="_blank">Curriculum Vitae</a><br>
-    <a href="https://www.hss.caltech.edu/people/aldo-lucia?back_url=%2Fpeople%3Fcategory%3D%26category%3D52%26search%3DAldo%2BLucia%26submit%3DSearch" target="_blank">Caltech Directory</a><br>
-    Email: <a href="mailto:allucia@caltech.edu">allucia@caltech.edu</a>
-</p>
+    <p>
+      <a href="https://www.aldolucia.com/cv/" target="_blank">Curriculum Vitae</a><br>
+      <a href="https://www.hss.caltech.edu/people/aldo-lucia?back_url=%2Fpeople%3Fcategory%3D%26category%3D52%26search%3DAldo%2BLucia%26submit%3DSearch" target="_blank">Caltech Directory</a><br>
+      Email: <a href="mailto:allucia@caltech.edu">allucia@caltech.edu</a>
+    </p>
   </div>
 
   <script>
-    // Check screen width
-    if (window.innerWidth <= 576) {
-      // This is likely a mobile device, adjust the layout
+    function isMobileDevice() {
+      return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    }
+
+    if (isMobileDevice()) {
       document.querySelector('.desktop-view').style.display = "none";
       document.querySelector('.mobile-view').style.display = "block";
     }
